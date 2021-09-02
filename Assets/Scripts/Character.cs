@@ -9,7 +9,6 @@ public class Character : InteractiveObject
     public float rotationSpeed;
     public int collectedApples = 0;
     public int id;
-    public Inventory inventory;
   
     void Update()
     {
