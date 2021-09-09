@@ -9,6 +9,8 @@ public class Character : InteractiveObject
     public float rotationSpeed;
     public int collectedApples = 0;
     public int id;
+    public Inventory inventory;
+    public InteractiveObject ioActive;
   
     void Update()
     {
@@ -24,16 +26,23 @@ public class Character : InteractiveObject
         }
     }
 
+    public void OnInteract()
+    {
+       // Pickup pickUpObject = inventory.GetPickupObject();
+        if (ioActive != null) //es "agarrable"?
+            ioActive.OnInteract(this);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // choca con interactive object? va a OnSomethingEnter
         InteractiveObject io = other.gameObject.GetComponent<InteractiveObject>();
-        if (io != null) { io.OnSomethingEnter(gameObject); }
+        if (io != null) { ioActive = io; } //ioActive es el objeto con el que interactuo;
     }
     private void OnTriggerExit(Collider other)
     {
         InteractiveObject io = other.gameObject.GetComponent<InteractiveObject>();
-        if (io != null) { io.OnSomethingExit(gameObject); }
+        if (io != null) {ioActive = null; }
     }
 
 }

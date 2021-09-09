@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     public float verticalAxis;
     public float horizontalAxis;
+    public Character character;
 
     public KeyCode keyUp, keyDown, keyRight, keyLeft, keyJump;
 
@@ -27,6 +28,12 @@ public class InputManager : MonoBehaviour
         } else {
             horizontalAxis = 0;
         } 
+
+
+        //character agarrando cosas;
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            character.OnInteract();
+        }
     }
     
     
