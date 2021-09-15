@@ -7,25 +7,25 @@ public class InteractiveObject : MonoBehaviour
 
     public string objectName;
     public Sprite thumb;
+    [HideInInspector] public Character character;
 
     // Virtual = funciones que pueden ser extendidas, sobreescritas por otras clases
    public virtual void OnSomethingEnter(GameObject go) {
-       
    }
 
-   public virtual void OnSomethingExit(GameObject go) {
-       
+   public virtual void OnSomethingExit(GameObject go) {  
    }
 
    public virtual void OnInteract(Character character) {
        // tiene el componente pickup? lo agarra;
+       this.character = character;
        Pickup pickup = GetComponent<Pickup>();
        if (pickup != null) {
            pickup.OnGrab(character);
        }
    }
 
-   public void UseIt() {
+   public virtual void UseIt() {
        Pickup pickup = GetComponent<Pickup>();
        if (pickup != null) {
            pickup.Drop();

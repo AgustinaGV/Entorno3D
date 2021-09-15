@@ -15,6 +15,17 @@ public class InventoryUI : MonoBehaviour
     public void Remove(InteractiveObject io)
     {
         print("Remove " + io.name);
+
+        InventoryButton mybutton = null;
+        InventoryButton[] allInventoryButtons = container.GetComponentsInChildren<InventoryButton>();
+        foreach (InventoryButton button in allInventoryButtons)
+            if (button.io == io)
+                mybutton = button;
+
+        if (mybutton != null) {
+            Destroy(mybutton.gameObject);
+        }
+
         //Destroy(gameObject);
     }
 }

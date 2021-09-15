@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<InteractiveObject> all; //logica del inventario;
-    public int totalItems = 10;
+    [HideInInspector] public int totalItems = 10;
     public InventoryUI ui; // UI del inventario;
 
     public void Add(InteractiveObject io)

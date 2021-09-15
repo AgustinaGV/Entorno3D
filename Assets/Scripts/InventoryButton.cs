@@ -5,17 +5,19 @@ using UnityEngine.UI;
 
 public class InventoryButton : MonoBehaviour
 {
-    InteractiveObject io;
+    public InteractiveObject io;
     public Text field;
+    public Image thumb;
 
     public void Init(InteractiveObject io)
     {
         this.io = io;
-        field.text = io.name; //agrega nombre del gameObject;
+        field.text = io.objectName; //agrega nombre del gameObject;
+        thumb.sprite = io.thumb;
     }
     public void Clicked()
     {
-        io.UseIt(); //llama a la funcion de INteractiveObject para droppear el obj;
+        io.UseIt(); //llama a la funcion de InteractiveObject para droppear el obj;
 
     }
 }

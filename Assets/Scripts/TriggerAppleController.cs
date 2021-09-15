@@ -7,9 +7,9 @@ public class TriggerAppleController : InteractiveObject
 {
   public GameObject apple;
   public Character character;
-  public Text inventoryText;
+  /*public Text inventoryText;*/
 
-  public override void OnSomethingEnter (GameObject go) {
+  /*public override void OnSomethingEnter (GameObject go) {
     
     //print("agarraste una manzana, iuju");
     character.collectedApples = character.collectedApples+1;
@@ -22,5 +22,5 @@ public class TriggerAppleController : InteractiveObject
     
     //print("dejaste de agarrar una manzana, qué hambre");
     base.OnSomethingExit(go);
-  }
+  }*/
 }
