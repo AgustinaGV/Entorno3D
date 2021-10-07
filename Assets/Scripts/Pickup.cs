@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public Character character;
+    Character character;
+    Transform originalParent;
+
+    private void Start() {
+        originalParent = transform.parent;
+    }
 
     public void OnGrab(Character character)
     {
@@ -12,12 +17,20 @@ public class Pickup : MonoBehaviour
         character.ioActive = null;
         this.gameObject.SetActive(false);
         character.inventory.Add( GetComponent<InteractiveObject>() );
+
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<Collider>().enabled = false;
+        transform.SetParent(character.hand);
+        transform.localPosition = Vector3.zero;
     }
     public void Drop()
     {
-        print("Dejando la manzana");
         this.gameObject.SetActive(true);
         character.inventory.Remove(GetComponent<InteractiveObject>() );
+
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<Collider>().enabled = true;
+        transform.SetParent(originalParent);
     }
 
 }

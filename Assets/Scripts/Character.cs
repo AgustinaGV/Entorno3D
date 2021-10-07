@@ -11,6 +11,9 @@ public class Character : InteractiveObject
     public int id;
     public Inventory inventory;
     public InteractiveObject ioActive;
+    public Transform hand;
+
+    public ActionsManager actions;
   
     void Update()
     {

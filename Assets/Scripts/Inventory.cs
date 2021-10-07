@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
     }
     public void Remove(InteractiveObject io)
     {
+        if(IsFull()) return;
         all.Remove(io);
         ui.Remove(io);
     }

@@ -7,7 +7,8 @@ public class InteractiveObject : MonoBehaviour
 
     public string objectName;
     public Sprite thumb;
-    [HideInInspector] public Character character;
+    //public int power;
+    public Character character;
 
     // Virtual = funciones que pueden ser extendidas, sobreescritas por otras clases
    public virtual void OnSomethingEnter(GameObject go) {
@@ -25,7 +26,7 @@ public class InteractiveObject : MonoBehaviour
        }
    }
 
-   public virtual void UseIt() {
+   public virtual void UseIt() { //cuando clickeo el boton de UI;
        Pickup pickup = GetComponent<Pickup>();
        if (pickup != null) {
            pickup.Drop();
