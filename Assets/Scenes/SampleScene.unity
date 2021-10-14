@@ -311,7 +311,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 87039368}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -389,7 +389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -36, y: 47.91561}
+  m_AnchoredPosition: {x: -36, y: 97.31174}
   m_SizeDelta: {x: 72, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &95445250
@@ -687,7 +687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306540085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.020492, y: 14.971022, z: -7.2503414}
+  m_LocalPosition: {x: -5.020492, y: -1, z: -7.2503414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 391425898}
@@ -1658,15 +1658,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e03d8f06d229749418aecefee4a5edc7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.07738
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e03d8f06d229749418aecefee4a5edc7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e03d8f06d229749418aecefee4a5edc7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5922
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e03d8f06d229749418aecefee4a5edc7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1872,7 +1872,7 @@ MonoBehaviour:
   thumb: {fileID: 0}
   character: {fileID: 0}
   allStates: []
-  state: 0
+  lookAtTarget: {fileID: 0}
 --- !u!54 &936102412
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2283,7 +2283,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!136 &1044042348
 CapsuleCollider:
@@ -2510,8 +2510,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203111813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.06, y: 5.4, z: 20.1}
-  m_LocalScale: {x: 24.50245, y: 17.50175, z: 38.510857}
+  m_LocalPosition: {x: -0.7, y: 6.8, z: 25.8}
+  m_LocalScale: {x: 24.50245, y: 17.50175, z: 55.713654}
   m_Children: []
   m_Father: {fileID: 1966774202}
   m_RootOrder: 1
@@ -2752,7 +2752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458870715}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.219, z: 0.013}
+  m_LocalPosition: {x: 0, y: 1.219, z: 0}
   m_LocalScale: {x: 1, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1044042344}
@@ -3363,10 +3363,13 @@ GameObject:
   - component: {fileID: 1966774202}
   - component: {fileID: 1966774204}
   - component: {fileID: 1966774205}
-  - component: {fileID: 1966774203}
   - component: {fileID: 1966774208}
+  - component: {fileID: 1966774210}
   - component: {fileID: 1966774207}
   - component: {fileID: 1966774206}
+  - component: {fileID: 1966774203}
+  - component: {fileID: 1966774211}
+  - component: {fileID: 1966774209}
   m_Layer: 0
   m_Name: Honguito
   m_TagString: Untagged
@@ -3381,15 +3384,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966774201}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.4, y: -6.22, z: 38.6}
+  m_LocalRotation: {x: -0, y: 0.725779, z: -0, w: 0.68792796}
+  m_LocalPosition: {x: -71.2, y: -10.9, z: 40.655174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 869349524}
   - {fileID: 1203111814}
   m_Father: {fileID: 1992831885}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 93.067, z: 0}
 --- !u!114 &1966774203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3399,14 +3402,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1966774201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b24d54f84cedccf4087428d72d1ebfd8, type: 3}
+  m_Script: {fileID: 11500000, guid: ef7c89311f05f5843b90dacb63f0253d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: Honguito
-  thumb: {fileID: 0}
-  character: {fileID: 0}
-  allStates: []
-  state: 0
+  honguito: {fileID: 0}
+  state: 1
 --- !u!54 &1966774204
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3421,7 +3421,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &1966774205
 BoxCollider:
@@ -3435,8 +3435,22 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8.531174, y: 12.3457155, z: 8.042772}
-  m_Center: {x: -12.085491, y: 2.5534148, z: 1.5224886}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1966774206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966774201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328ad0a06c40fdc44a3e2c113dc0cf44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  honguito: {fileID: 0}
+  state: 2
+--- !u!114 &1966774207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3448,7 +3462,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc167b7a48070d488f96f43e57a99f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1966774207
+  honguito: {fileID: 0}
+  state: 0
+--- !u!114 &1966774208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3457,10 +3473,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1966774201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef7c89311f05f5843b90dacb63f0253d, type: 3}
+  m_Script: {fileID: 11500000, guid: b24d54f84cedccf4087428d72d1ebfd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1966774208
+  objectName: Honguito
+  thumb: {fileID: 0}
+  character: {fileID: 0}
+  allStates:
+  - {fileID: 1966774207}
+  - {fileID: 1966774206}
+  - {fileID: 1966774203}
+  - {fileID: 1966774211}
+  lookAtTarget: {fileID: 1966774209}
+--- !u!114 &1966774209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3472,8 +3497,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc79cb6b9a0977f448aaf690e798cdaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   speed: 0.7
+--- !u!114 &1966774210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966774201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7963dbeed85b7945a2e2e9b5bf1bbfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  honguito: {fileID: 0}
+  state: 0
+--- !u!114 &1966774211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966774201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00babdee55f245447b4f12a207d13964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  honguito: {fileID: 0}
+  state: 3
 --- !u!224 &1980721888 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2840828110162774037, guid: 832eee75d84865141a20ae6fe3dbf917, type: 3}
@@ -3503,7 +3555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992831884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.020492, y: 14.971022, z: -7.2503414}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1352594932}
