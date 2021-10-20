@@ -7,25 +7,34 @@ public class Follow : HonguitoState
 
     int distanceToStopFollow = 31;
     int limit = 4;
-    float speed = 8;
+    float speed = 5;
+    Character character;
+
+    public override void Init() {
+        character = honguito.character;
+    }
 
     private void Update() {
 
-        if (honguito.character == null) {
-            honguito.SetNewState(states.ALERT);
+        if (character == null) {
+            Alert();
             return;
         }
         
-        honguito.lookAtTarget.LookAt(honguito.character);
-        float distanceToCharacter = Vector3.Distance(transform.position, honguito.character.transform.position);
+        honguito.lookAtTarget.LookAt(character);
+        float distanceToCharacter = Vector3.Distance(transform.position, character.transform.position);
 
         if(distanceToCharacter > distanceToStopFollow) {
-            honguito.SetNewState(states.ALERT);
+            Alert();
         } else if (distanceToCharacter < limit){
            honguito.SetNewState(states.TALK);
         } else {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
             
+    }
+
+    void Alert() {
+        honguito.SetNewState(states.ALERT);
     }
 }

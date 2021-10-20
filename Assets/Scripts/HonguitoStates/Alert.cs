@@ -14,9 +14,9 @@ public class Alert : HonguitoState
         }  
 
         float distanceToCharacter = Vector3.Distance(transform.position, honguito.character.transform.position);
-        if(distanceToCharacter < distanceToFollow) {
+        if (distanceToCharacter < distanceToFollow) {
             honguito.SetNewState(states.FOLLOW);
-        }            
+        }        
     }
 
     public override void OnCharacterExitViewZone(Character character) {
