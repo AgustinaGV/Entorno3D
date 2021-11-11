@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class Idle : HonguitoState
 {
+
+    public states stateActivatedByDistance = states.ALERT;
+
+    
     public override void OnCharacterEnterViewZone(Character character) {
         print("estoy en idle");
-        honguito.SetNewState(states.ALERT);
+        if(honguito.isColibri) {
+            print("SOY UN COLIBRI IDLE");
+            honguito.SetNewState(stateActivatedByDistance);
+        } else {
+            honguito.SetNewState(stateActivatedByDistance);
+        }
+        
 
     }
 

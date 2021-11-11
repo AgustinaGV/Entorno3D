@@ -33,15 +33,4 @@ public class HonguitoState : MonoBehaviour
         
     }
 
-    /*void Awake() {
-
-        honguito = GetComponent<Honguito>();
-    }
-
-    public virtual void OnCharacterExitViewZone(Character character) {
-
-        print("salio y soy HonguitoState : " + character);
-        
-    }*/
-
 }

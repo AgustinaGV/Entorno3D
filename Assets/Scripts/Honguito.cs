@@ -5,6 +5,8 @@ using UnityEngine;
 public class Honguito : InteractiveObject
 {
 
+    public bool isColibri;
+
     public List<HonguitoState> allStates;
     HonguitoState currentState;
     public LookAtTarget lookAtTarget;

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Alert : HonguitoState
 {
 
-    int distanceToFollow = 30;
+    public int distanceToFollow = 30;
+    public states stateActivatedByDistance;
 
     private void Update() {
 
@@ -15,7 +16,7 @@ public class Alert : HonguitoState
 
         float distanceToCharacter = Vector3.Distance(transform.position, honguito.character.transform.position);
         if (distanceToCharacter < distanceToFollow) {
-            honguito.SetNewState(states.FOLLOW);
+            honguito.SetNewState(stateActivatedByDistance);
         }        
     }
 
