@@ -14,7 +14,16 @@ public class Talk : HonguitoState
 
     [System.Serializable]
     public class SpeachData {
+        public int id;
+        public int gotoId;
         public string text;
+        public MultipleChoiceData[] multiplechoice;
+    }
+
+    [System.Serializable]
+    public class MultipleChoiceData {
+        public string text;
+        public int gotoId;
     }
 
     public override void Init() {
@@ -38,21 +47,6 @@ public class Talk : HonguitoState
         print("sali del alert");
         honguito.SetNewState(states.IDLE);
         chatUI.Hide();
-    }
-
-
-    public void Idle() {
-        print("Soy un hongo bueno, estoy tranca");    
-    }
-
-    public void Heal() {
-        print("Soy un hongo bueno, voy a curarte");
-    
-    }
-
-    public void Give() {
-        print("Soy un hongo bueno, voy a regalarte algo");
-  
     }
 
 }
